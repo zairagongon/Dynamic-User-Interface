@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+    font-weight: normal;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Header Styles */
+
+#headerContainer > h1 {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px 20px 0px 20px;
+}
+
+#headerContainer > small {
+    display: inline-block;
+    font-size: 20px;
+    padding: 0 0 20px 0;
+    font-style: italic;
+    text-decoration-color: rgb(155, 108, 108);
+}
+
+#headerContainer {
+    margin: 30px;
+    text-align: center;
+    box-shadow: 7px 7px rgba(67, 51, 84, 0.3);
+    border-radius: 8px;
+    background-color: rgb(138, 83, 180);
+    border: 1px solid black;
+}
+
+/* Form Styles */
+
+#formContainer {
+    margin: 30px;
+    border-radius: 8px;
+    background-color: rgba(192, 199, 222, 0.875);
+    border: 3px solid grey;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 7px 7px rgba(67, 51, 84, 0.3);
+}
+
+#formContainer > #studentForm > .input-field {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+#formContainer > #studentForm > .input-field > label {
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#formContainer > #studentForm > .input-field > input {
+    min-height: 25px;
+    min-width: fit-content;
+    border-radius: 20px;
+    background-color: rgb(240, 230, 236);
+}
+
+#formContainer > #studentForm :nth-last-child(1) > button {
+    background-color: rgb(128, 128, 176);
+    margin: 10px;
+    padding: 4px;
+    display: flex;
+    margin-left: 175px;
+    box-shadow: 4px 4px rgba(67, 51, 84, 0.3);
+}
+
+#listContainer > .list-item{
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(192, 199, 222, 0.875);
+    border-radius: 4px;
+    box-shadow: 7px 7px rgba(67, 51, 84, 0.3);
+}
+
+#listContainer > .list-item > h2{
+    padding: 4px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+
+#listContainer > .list-item > p {
+    padding: 4px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+
+#listContainer > .list-item > button {
+    padding: 4px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 2px 2px rgba(67, 51, 84, 0.3);
+    background-color: rgb(194, 186, 202);
+    border-radius: 5px;
+}
+
+/* Responsive Design Styles */
+
+#listContainer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 10px;
+}
+
+@media (width < 320px) { /*mobile*/
+    #listContainer > .list-item {
+        grid-column: span 12;
+    }
+}
+
+@media (width < 1000px) { /*laptop*/
+    #listContainer > .list-item {
+        grid-column: span 2;
+    }
+}
+
+@media (width < 320px) and (width < 1000px) { /*tablet*/
+    #listContainer > .list-item {
+        grid-column: span 4;
+    }
+}
